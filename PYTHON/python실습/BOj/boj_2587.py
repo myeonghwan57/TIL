@@ -1,8 +1,9 @@
-nums = []
-for i in range(5):
-    nums.append(int(input()))
-
-nums.sort()
-
-print(int(sum(nums)/5))
-print(nums[2])
+list_ = [] 
+for i in range(1, 6): 
+    w = input() 
+    if "FBI" in w: 
+        list_.append(i) 
+if list_: 
+    print(*list_) 
+else: 
+    print("HE GOT AWAY!")
