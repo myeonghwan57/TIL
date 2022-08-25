@@ -1,6 +1,6 @@
 # DB - ORM
 
-Object - Relational - Mapping 
+**Object - Relational - Mapping** 
 
 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템 간의 데이터를 변환하는 프로그래밍 기술 
 
