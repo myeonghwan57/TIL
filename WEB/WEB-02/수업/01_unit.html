@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_unit</title>
+  <style>
+    /* 크기가 고정된 박스 */
+    .box1{
+      width : 100px;
+      height : 100px;
+      background-color: blueviolet;
+    }
+    /* 크기가 유동적인 박스 */
+    .box2{
+      width : 10%; 
+      height: 100px;
+      background-color: blue;
+    }
+    .font-big {
+      font-size: 36px;
+    }
+
+    .em{
+      font-size: 2em;
+    }
+    .rem{
+      font-size: 2rem;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class = 'box1'><strong>box1</strong></div>
+  <div class = 'box2'><strong>box2</strong></div>
+
+  <h2 class="font-big">2em</h2>  
+  <ul class ='em'>
+    <li class="em">2em</li>
+  </ul>
+
+  <h2 class="rem">2rem</h2>
+  <ul class="rem">
+    <li class="rem">2rem</li>
+  </ul>
+
+  <ul class="font-big">
+    <li class="em">2em</li>
+    <li class="rem">2rem</li>
+    <li>no class</li>
+    </ul>
+    
+</body>
+</html>
