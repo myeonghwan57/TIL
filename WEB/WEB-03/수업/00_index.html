@@ -6,42 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .parent {
+    .parent{
+      position: relative;
+      border: 1px solid black;
       width: 10rem;
       height: 5rem;
-      border: 1px solid red;
     }
-    .child {
+    .child{
+     
       width: 10rem;
       height: 1rem;
-      background-color: bisque;
+      background-color: rgb(117, 50, 50);
     }
-    .relative {
+    .relative{
       position: relative;
       top: 4rem;
     }
-    .absolute {
+    .absolute{
       position: absolute;
       top: 4rem;
     }
-    .parent-relative {
-      position: relative;
+    .box{
+      position: absolute;
+      background-color: blue;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid black;
     }
   </style>
 </head>
 <body>
-  <!-- 기본 -->
-  <div class="parent">
+  <!-- <div class="parent">
     <div class="child"></div>
   </div>
   <div class="parent">
     <div class="child relative"></div>
     <div class="child"></div>
   </div>
-  <!-- absolute -->
-  <div class="parent parent-relative">
+  <div class="parent">
     <div class="child absolute">1</div>
     <div class="child"></div>
-  </div>
+  </div> -->
+  <div class ="box">box1</div>
+  <div class ="box">box2</div>
+  <div class ="box">box3</div>
 </body>
 </html>

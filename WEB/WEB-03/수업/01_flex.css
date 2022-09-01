@@ -1,13 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
 .item-container {
   display: flex;
   height: 500px;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .card {
