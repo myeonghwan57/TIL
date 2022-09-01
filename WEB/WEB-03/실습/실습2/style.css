@@ -1,0 +1,46 @@
+/* 아래에 CSS를 작성해주세요. */
+.card{
+  width:300px;
+
+}
+.item-image{
+  width: 100%;
+  border-radius: 5px;
+}
+.item-info{
+  width: 280px;
+  margin: auto;
+}
+.text-margin{
+  margin-top : 2px;
+  margin-bottom : 2px;
+}
+.brand-name{
+
+  font-size: 13px;
+  color: #969696;
+}
+.item-name{
+
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+.item-price{
+
+  font-size: 20px;
+  font-weight: bold;
+}
+.on-sale{
+  color: #66F8F0;
+}
+
+.item-grade{
+  font-size: 12px;
+  color: #3c3c3c;
+  font-weight: bold;
+}
+.item-review{
+  font-size: 12px;
+  color: #969696;
+  font-weight: bold;
+}

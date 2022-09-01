@@ -1,0 +1,45 @@
+/* 아래에 CSS를 작성해주세요. */
+.all_about{
+  font-size: 15px;
+}
+.center{
+  text-align:center;
+}
+.card {
+  display: flex;
+  width: 900px;
+  justify-content: flex-start;
+}
+.item{
+  float: left;
+  margin: 10px;
+  width: 300px;
+}
+.item-image{
+  width: 100%;
+  border-radius: 1rem;
+}
+.item-info{
+  width: 280px;
+  margin: auto;
+}
+.item-install{
+  margin-top : 10px;
+  margin-bottom : 0px;
+  font-size: 11px;
+  color: #969696;
+
+}
+.item-guide{
+  margin-top : 0px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -1px;
+
+}
+.item-text{
+  font-size: 8px;
+  color: #969696;
+  letter-spacing: -1px;
+}
