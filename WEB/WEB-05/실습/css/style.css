@@ -1,0 +1,112 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 40px;
+    top: 0;
+    position: sticky;
+    align-items: center;
+    background-color: white;
+}
+
+.logo{
+    height: 60px;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.list-item{
+    margin: 1rem;
+}
+
+.button{
+    text-decoration: none;
+    color: grey;
+}
+.button:hover{
+    color: grey;
+}
+.banner{
+  display: flex;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  align-items: center;
+  justify-content: center;
+}
+.banner-title{
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.aside{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-grow: 2;
+
+
+}
+
+.aside-list{
+  list-style: none;
+  padding: 0px;
+}
+
+.content{
+  display: flex;
+}
+
+.movies{
+  flex-grow: 8;
+  background-color: rgb(238, 234, 234);
+  margin-top: 10px;
+  padding: 24px;
+  text-align: center;
+
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+.movies-image{
+  width: 300px;
+  border-radius: 1rem;
+
+}
+
+.movies-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.footer{
+  display:  flex;
+  background-color: black;
+  color: white;
+  position: fixed;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
