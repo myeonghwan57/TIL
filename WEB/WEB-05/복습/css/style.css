@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+  position: relative;
+}
+.nav{
+  display: flex;
+  padding: 1rem;
+  height: 3rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  
+}
+.nav-list{
+  display: flex;
+}
+.nav-link{
+  text-decoration: none;
+}
+
+.nav-item{
+  width: 5rem;
+  text-align: center;
+}
+.banner{
+  display: flex;
+  flex-direction: column;
+  background-image: url('../assets/apparel.jpeg');
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-title{
+  margin: 3rem;
+  color: black;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.container{
+  width:1280px;
+  margin: 0 auto;
+}
+.about-img{
+  width: 500px;
+  height: auto;
+}
+.about{
+  display: flex;
+  margin: 3rem
+}
+.about-text{
+  display: flex;
+  margin: auto;
+  padding: 3rem;
+  flex-direction: column;
+}
+.about-title{
+  text-align: center;
+  font-size:  3rem;
+  margin: 1rem
+}
+.more-icon{
+  width: 64px;
+  height: 64px;
+}
+.more-list{
+  display: flex;
+  justify-content: space-evenly;
+}
