@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <style>
+    .box{
+      background-color: antiquewhite;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="d-flex">
+        <div class="box">col</div>
+        <div class="box">col</div>
+        <div class="box">col</div>
+      </div>
+      <div class="row my-3">
+        <div class="col"><div class="box">col</div></div>
+        <div class="col"><div class="box">col</div></div>
+        <div class="col"><div class="box">col</div></div>
+      </div>
+      <div class="row my-3">
+        <div class="col"><div class="box">col</div></div>
+        <div class="col"><div class="box">col</div></div>
+        <div class="col"><div class="box">col</div></div>
+        <div class="col"><div class="box">col</div></div>
+      </div>
+      <div class="row my-3">
+        <div class="col-2"><div class="box">col</div></div>
+        <div class="col-6"><div class="box">col</div></div>
+      </div>
+      <!-- 12를 넘어서는  -->
+      <div class="row my-3">
+        <div class="col-5"><div class="box">col5</div></div>
+        <div class="col-6"><div class="box">col6</div></div>
+        <div class="col-4"><div class="box">col4</div></div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3"><div class="box">col</div></div>
+        </div>
+
+      <!-- 가장 작은 곳에서는 한줄 다 차지
+      가장 작은 화면 1칸 
+      모바일 2칸
+      태블릿 3칸
+      pc 4칸 -->
+      <div class="row my-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="box">col</div></div>
+      </div>
+      <!-- 중간에 지정한 offset만큼 띄우기 -->
+      <div class="row my-3">
+        <div class="col-4">
+          <div class="box">col</div>
+        </div>
+        <div class="col-4 offset-4">
+          <div class="box">col</div>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="box">col</div>
+        </div>
+        <div class="col-3 offset-6">
+          <div class="box">col</div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-6">
+          <div class="box">col6</div>
+        </div>
+        <div class="col-6">
+          <div class="box">col6</div>
+        </div>
+      </div>
+      <div class="row-gx my-3">
+        <div class="col-6">
+          <div class="box">col6</div>
+        </div>
+        <div class="col-6">
+          <div class="box">col6</div>
+        </div>
+      </div>
+
+
+
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
