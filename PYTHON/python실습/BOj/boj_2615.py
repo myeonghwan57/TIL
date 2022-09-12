@@ -1,9 +1,10 @@
 import sys
 input = sys.stdin.readline
 
+# 오목판 입력 
 board = []
 for i in range(19):
-    board.append(list(map(int, input().split())))
+    board.append(list(map(int, input().split()))) 
 
 # → ↓ ↘ ↗
 dx = [0, 1, 1, -1]
