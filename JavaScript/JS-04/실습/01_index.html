@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <title>프로젝트</title>
+  <style>
+    .ball{
+      display: inline-block;
+      width: 10rem;
+      height: 10rem;
+      margin: .4rem;
+      background-color: yellowgreen;
+      border-radius: 50%;
+      /* 컨테츠 중앙 정렬 */
+      text-align: center;
+      line-height: 10rem;
+      /* 폰트 설정 */
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<body>
+  <h1>로또 추천 번호</h1>
+  <!-- <div>
+    <input type=""> 사용자에게 입력 받은 갯수 만큼 숫자 출력
+  </div> -->
+  <button id="lotto-btn" type="reset">자동 추천</button>
+ 
+
+  <div id="result"></div><hr>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const button = document.querySelector('#lotto-btn')
+    
+    button.addEventListener('click',function(){
+      const result = document.querySelector('#result')
+      const numbers = _.sampleSize(_.range(1,46),6)
+      numbers.sort((a, b) => a - b);
+      //for 문 사용 -> 6개의 div 생성   
+      for (let i = 0; i < 6; i++ ){
+        const ball = document.createElement('div')
+        ball.classList.add('ball')
+        ball.innerText = numbers[i]
+        result.appendChild(ball)
+      }   
+    }) 
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
