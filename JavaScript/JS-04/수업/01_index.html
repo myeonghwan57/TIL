@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트</title>
+  <style>
+    .ball{
+      display: inline-block;
+      width: 10rem;
+      height: 10rem;
+      margin: .4rem;
+      background-color: yellowgreen;
+      border-radius: 50%;
+      /* 컨테츠 중앙 정렬 */
+      text-align: center;
+      line-height: 10rem;
+      /* 폰트 설정 */
+      font-size: xx-large;
+
+    }
+    .ball-container{
+      display: flex;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>로또 추천 번호</h1>
+  <button id="lotto-btn">자동 추천</button>
+  <div id="result"></div><hr>
+  <!-- <div class="ball-container">
+   
+  </div> -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const button = document.querySelector('#lotto-btn')
+    button.addEventListener('click',function(){
+
+      const ballContainer = document.createElement('div')
+      const numbers = _.sampleSize(_.range(1,46),6)
+      const ball = document.createElement('div')
+      
+      ball.classList.add('ball')
+      ball.innerText = numbers[0]
+     
+      ballContainer.appendChild(ball)
+     
+      const result = document.querySelector('#result')
+      result.appendChild(ballContainer)
+
+    })
+  </script>
+</body>
+</html>
