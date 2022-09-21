@@ -4,7 +4,7 @@
 
 
 
-![클라이언트 서버](server기초.assets/클라이언트 서버-16637527598431.png)
+![클라이언트서버](server기초.assets/클라이언트서버.png)
 
 `Client` : 서버에서 사용할 수 있는 서비스에 접근하는 컴퓨터 하드웨어 또는 소프트웨어
 
@@ -101,7 +101,7 @@
   - HTTP 메시지는 ASCII로 인코딩된 텍스트 정보이며 여러 줄
   - HTTP 요청과 응답의 구조는 서로 닮았다.
 
-![메시지 구조](server기초.assets/메시지 구조.webp)
+![메시지구조](server기초.assets/메시지구조.png)
 
 start line
 
