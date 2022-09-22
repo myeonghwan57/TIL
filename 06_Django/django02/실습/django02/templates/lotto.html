@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lotto</title>
+  <style>
+    .num{
+      font-size: 3rem;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>  
+    <h1>로또 번호 추첨</h1><hr>
+    <div>
+      {% for numbers in numbers_list %}
+        <p>
+          {% for num in numbers %}
+            <span class="num">{{ num }}</span>
+            {% endfor %}
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
