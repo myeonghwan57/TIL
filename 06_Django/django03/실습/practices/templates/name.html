@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<p class="fw-bold"> 이름을 입력하세요.</p>
+<form action="/past_life">
+  <input class="form-control" type="text" name='name'>
+  <button type="submit" class="btn btn-primary my-4">전생 확인하기</button>
+</form>
+{% endblock %}

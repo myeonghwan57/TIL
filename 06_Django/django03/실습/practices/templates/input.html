@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div>
+
+  <form action="/result">
+    <p>문단의 수</p>
+    <input class="form-control" type="text" name="cnt_par">
+    <p>문단별 단어의 수</p>
+    <input class="form-control" type="text" name='cnt_word'>
+    <button type="submit" class="btn btn-primary my-4">생성</button>
+  </form>
+
+</div>
+{% endblock %}

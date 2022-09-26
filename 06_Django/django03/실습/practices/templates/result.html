@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+{% for par in paragraph %}
+{% for word in par%}
+<span>{{word}} </span>
+{% endfor %}
+<hr>
+{% endfor %}
+
+
+{% endblock %}
