@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>articles index</title>
+</head>
+
+<body>
+  <div>
+    <h1>방명록</h1>
+  </div>
+  <div>
+    <h2>글 목록</h2>
+    {% for content in guest_book %}
+    <p>{{content.content}}</p>
+    {% endfor %}
+  </div>
+  <div>
+    <h2>글 작성</h2>
+    <form action="{% url 'articles:create' %}">
+      <input type="text" name="content">
+      <input type="submit">
+    </form>
+  </div>
+</body>
+
+</html>
