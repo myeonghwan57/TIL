@@ -37,3 +37,34 @@ def delete(request, pk):
     # pk 에 해당하는 글 삭제
     Post.objects.get(id=pk).delete()
     return redirect("posts:index")
+
+
+def detail(request, pk_):
+    post = Post.objects.get(pk=pk_)
+    context = {
+        "post": post,
+    }
+    return render(request, "posts/detail.html", context)
+
+
+def edit(request, pk):
+    post = Post.objects.get(pk=pk)
+    context = {
+        "post": post,
+    }
+    return render(request, "posts/edit.html", context)
+
+
+def update(request, pk):
+
+    post = Post.objects.get(pk=pk)
+
+    # parameter 로 날아온 데이터 받아서
+    title = request.GET.get("title")
+    content = request.GET.get("content")
+    # db에 저장
+    post.title = title
+    post.content = content
+    post.save()
+
+    return redirect("posts:detail", post.pk)
