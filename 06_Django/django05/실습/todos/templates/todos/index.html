@@ -43,15 +43,28 @@
       </thead>
       <tbody>
         {%for todo in todos%}
-        <tr>
+        <tr id="tr_">
+          {% if todo.completed == False %}
           <th scope="row">{{todo.priority}}</th>
           <td>{{todo.content}}</td>
           <td>{{todo.created_at}}</td>
           <td>{{todo.deadline}}</td>
+          {% else %}
+          <th class="opacity-50 text-decoration-line-through" scope="row">{{todo.priority}}</th>
+          <td class="opacity-50 text-decoration-line-through">{{todo.content}}</td>
+          <td class="opacity-50 text-decoration-line-through">{{todo.created_at}}</td>
+          <td class="opacity-50 text-decoration-line-through">{{todo.deadline}}</td>
+          {% endif %}
           <td>{{todo.completed}}</td>
-          <td>수정</td>
-          <td><button type="button" class="btn btn-danger btn-sm"><a class="text-white"
-                href="/delete/{{todo.id}}">삭제</a></button>
+          <td>
+            <button id='boolean_button' type="button" class="btn btn-primary btn-sm">
+              <a class="text-white fw-bold text-decoration-none" href="/update/{{todo.id}}">수정</a>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger btn-sm">
+              <a class="text-white fw-bold text-decoration-none" href="/delete/{{todo.id}}">삭제</a>
+            </button>
           </td>
         </tr>
         {%endfor%}
@@ -60,52 +73,4 @@
   </div>
 </div>
 
-
-
-
-
-<!-- <ul>
-  {%for todo in todos%}
-  <li>{{todo.priority}}-{{todo.content}}-{{todo.deadline}}-{{todo.completed}}
-    <a href="{%url 'todos:delete' todo.pk%}">삭제</a>
-  </li>
-  {%endfor%}
-</ul> -->
-
-
-
-<!-- <form action="{% url 'todos:create' %}">
-  <div>
-    <input type="text" name="content" id="" maxlength="80">
-    <input type="submit" value="할 일 추가">
-  </div>
-</form>
-<hr>
-
-<ul>
-  {%for todo in todos%}
-  <li>{{todo.id}}-{{todo.content}}-{{todo.completed}}
-    <a href="{%url 'todos:delete' todo.pk%}">삭제</a>
-  </li>
-  {%endfor%}
-</ul> -->
-
-
 {% endblock %}
-
-
-<!-- 사용자에게 정보를 입력 받을 경우 form  사용 -->
-<!-- action 어떤 url 요청할지 -->
-<!-- <form action="{% url 'todos:create' %}">
-    <input type="text" name="content" id="" maxlength="80">
-    <input type="submit" value="할 일 추가">
-  </form>
-  <hr>
-
-  <ul>
-    {%for todo in todos%}
-    <li>{{todo.id}}-{{todo.content}}-{{todo.completed}}
-      <a href="{%url 'todos:delete' todo.pk%}">삭제</a>
-    </li>
-    {%endfor%}
-  </ul>

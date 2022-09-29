@@ -1,0 +1,33 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div>
+    <form action="{% url 'todos:update' todo.pk %}">
+      <div class="input-group mb-3">
+        <span class="input-group-text">할일</span>
+        <input type="text" class="form-control" name="content" maxlength="80" value="{{todo.content}}">
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text">우선순위</label>
+        <select name='priority' class="form-select">
+          <option selected> {{todo.priority}}</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">마감기한</span>
+        <input type="date" name="deadline" class="form-control" value="{{todo.deadline|date:'d-m-y'}}">
+      </div>
+      <div>
+        <input type="submit" class="form-control" value="수정">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %} -->
