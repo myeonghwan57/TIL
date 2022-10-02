@@ -6,4 +6,3 @@ T = int(input())
 score = [int(input()) for _ in range(T)]
 
 cnt = 0
-
