@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    {% bootstrap_form movie_form %}
+    <input type="submit" href='' value='수정' class='btn btn-primary'>
+
+  </form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-2">pk</th>
+        <th class="col">영화제목</th>
+      </tr>
+    </thead>
+    {% for movie in  movies%}
+      <tbody>
+        <tr>
+          <th scope="row">
+            {{movie.pk}}
+          </th>
+          <td>
+            <a href="{% url 'movies:detail' movie.pk %}">{{movie.title}}</a>
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+{% endblock %}
