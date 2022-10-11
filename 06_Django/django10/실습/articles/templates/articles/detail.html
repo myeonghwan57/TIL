@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <h1>{{ article.pk }}번 게시글</h1>
+  <h3>{{article.title}}</h3>
+  <p>{{ article.created_at }}|
+    {{ article.updated_at }}</p>
+  <p>{{article.content}}</p>
+  <a href="{%url 'articles:index' %}">목록</a>
+  <a href="{%url 'articles:update' article.pk%}">수정하기</a>
+
+{% endblock %}
