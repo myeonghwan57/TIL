@@ -32,10 +32,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "articles",
-    'accounts',
+    "accounts",
+    "django_extensions",
     "django_bootstrap5",
     "django.contrib.admin",
-    "django.contrib.auth",
+    "django.contrib.auth",  # 유저 인증과 관련된 기능 담당
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -127,4 +128,5 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #  User model 관련 설정
-AUTH_USER_MODEL = 'accounts.User'
+# accounts에 있는 User 가 앞으로 사용할 User
+AUTH_USER_MODEL = "accounts.User"
