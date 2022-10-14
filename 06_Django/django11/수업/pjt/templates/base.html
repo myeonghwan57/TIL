@@ -13,10 +13,10 @@
 
   <body>
     <p>{{request.user}}</p>
-    {% comment %} 템플릿에서 사용할수 있는 변수  {% endcomment %}
+    {% comment %} 템플릿에서 사용할수 있는 변수 -> context  {% endcomment %}
     {% if request.user.is_authenticated  %}
     <span>{{request.user}}</span>
-    <a href="">로그아웃</a>
+    <a href="{% url 'accounts.logout' %}">로그아웃</a>
     {% else %}
     <a href="{% url 'accounts:signup' %}">회원가입</a>
     <a href="{% url 'accounts:login' %}">로그인</a>
