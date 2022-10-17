@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<h1>{{ article.pk }}번 게시글</h1>
+<p>{{ article.created_at|date:"y-m-d D" }} | {{ article.updated_at|date:"y-m-d D" }}</p>
+<h2>{{ article.content }} </h2>
+{% comment %} {%if requset.user == article.user %} 다음주 수업 {% endcomment %} 
+{% if article.image %}
+<img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+{% endif %}
+<div>
+  <a href="{% url 'articles:update' article.pk %}"class="btn btn-outline-dark my-3">수정하기</a>
+  <a href="{% url 'articles:delete' article.pk %}"class="btn btn-outline-dark my-3">삭제하기</a>
+</div>
+{% endblock %}
