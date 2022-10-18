@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %} 
+<h1>게시글</h1>
+<div class = 'row'>
+  {% for article in articles %}
+  <div class ='col-4'>
+    <div class="card h-100">
+      {% if article.image %}
+      <img src="{{article.image.url}}" class="card-img-top" alt="...">
+      {% else %}
+      <img src="https://dummyimage.com/1200x960/000/fff" class="card-img-top" alt="...">
+      {% endif %}
+      <div class="card-body">
+        <div class='d-flex justify-content-between'>
+          <h4 class="card-title align-self-center">{{ article.title }}</h4>
+          <a href="{% url 'articles:detail' article.pk %}" class="btn btn-outline-dark my-3">상세보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
