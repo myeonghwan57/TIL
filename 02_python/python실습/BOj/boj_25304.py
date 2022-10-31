@@ -8,5 +8,6 @@ for i in range(N):
  
 if X == total: 
     print("Yes")
+
 else: 
     print("No")
