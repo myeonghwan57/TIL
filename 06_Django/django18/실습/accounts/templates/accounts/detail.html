@@ -2,7 +2,10 @@
 
 {% block body %}
   <h1>{{ user.username }}님의 프로필</h1>
-  <p>{{user.email}}|{{user.first_name}}</p>
+  <p>{{user.email}}
+    |
+    {{user.first_name}}</p>
+  <a href="{%url 'accounts:update' %}">프로필 수정</a>
   <p>팔로우
     {{user.followings.count}}
     | 팔로워

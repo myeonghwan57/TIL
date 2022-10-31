@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect,  get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login as auth_login
@@ -56,6 +56,7 @@ def logout(request):
 
 @login_required
 def update(request):
+    # 유효성 검사
     if request.method == "POST":
         form = CustomUserChangeForm(request.POST, instance=request.user)
         if form.is_valid():
