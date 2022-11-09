@@ -18,9 +18,6 @@ def bfs(x, y):
                     visited[nx][ny] = 1
                     stack.append((nx,ny))
 
-
-
-
 while True:
     w, h =map(int,input().split())
     visited = [[0]*w for _ in range(h)]
